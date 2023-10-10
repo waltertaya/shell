@@ -70,3 +70,36 @@ hsh main.c shell.c
 ($) exit
 $
 
+alex@~$ ls /var && ls /var
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+alex@~$ ls /hbtn && ls /var
+ls: cannot access /hbtn: No such file or directory
+alex@~$ ls /var && ls /var && ls /var && ls /hbtn
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+ls: cannot access /hbtn: No such file or directory
+alex@~$ ls /var && ls /var && ls /var && ls /hbtn && ls /hbtn
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+ls: cannot access /hbtn: No such file or directory
+alex@~$
+alex@~$ ls /var || ls /var
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+alex@~$ ls /hbtn || ls /var
+ls: cannot access /hbtn: No such file or directory
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+alex@~$ ls /hbtn || ls /hbtn || ls /hbtn || ls /var
+ls: cannot access /hbtn: No such file or directory
+ls: cannot access /hbtn: No such file or directory
+ls: cannot access /hbtn: No such file or directory
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+alex@~$ ls /hbtn || ls /hbtn || ls /hbtn || ls /var || ls /var
+ls: cannot access /hbtn: No such file or directory
+ls: cannot access /hbtn: No such file or directory
+ls: cannot access /hbtn: No such file or directory
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+alex@~$
+
