@@ -63,43 +63,19 @@ The shell will be tested in both interactive and non-interactive modes.
 The shell should prompt the user for input and execute the commands that are entered.
 
 ```shell
-$ ./hsh
-($) /bin/ls
-hsh main.c shell.c
-($)
-($) exit
+waltermitty@waltermitty-VivoBook-15-ASUS-Laptop-X540UAR:~/shell$ gcc *.c
+waltermitty@waltermitty-VivoBook-15-ASUS-Laptop-X540UAR:~/shell$ ls
+a.out    AUTHORS       functions2.c  functions.c  main.c     shell.h
+Attempt  functions1.c  functions3.c  macros.h     README.md
+waltermitty@waltermitty-VivoBook-15-ASUS-Laptop-X540UAR:~/shell$ ./a.out
+$ls
+a.out	 AUTHORS       functions2.c  functions.c  main.c     shell.h
+Attempt  functions1.c  functions3.c  macros.h	  README.md
+$pwd
+/home/waltermitty/shell
+$cd shell
+./a.out: 3: cd: can't cd to shell
 $
 
-alex@~$ ls /var && ls /var
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
-alex@~$ ls /hbtn && ls /var
-ls: cannot access /hbtn: No such file or directory
-alex@~$ ls /var && ls /var && ls /var && ls /hbtn
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
-ls: cannot access /hbtn: No such file or directory
-alex@~$ ls /var && ls /var && ls /var && ls /hbtn && ls /hbtn
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
-ls: cannot access /hbtn: No such file or directory
-alex@~$
-alex@~$ ls /var || ls /var
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
-alex@~$ ls /hbtn || ls /var
-ls: cannot access /hbtn: No such file or directory
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
-alex@~$ ls /hbtn || ls /hbtn || ls /hbtn || ls /var
-ls: cannot access /hbtn: No such file or directory
-ls: cannot access /hbtn: No such file or directory
-ls: cannot access /hbtn: No such file or directory
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
-alex@~$ ls /hbtn || ls /hbtn || ls /hbtn || ls /var || ls /var
-ls: cannot access /hbtn: No such file or directory
-ls: cannot access /hbtn: No such file or directory
-ls: cannot access /hbtn: No such file or directory
-backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
-alex@~$
+
 
