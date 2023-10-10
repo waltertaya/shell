@@ -63,18 +63,12 @@ The shell will be tested in both interactive and non-interactive modes.
 The shell should prompt the user for input and execute the commands that are entered.
 
 ```shell
-waltermitty@waltermitty-VivoBook-15-ASUS-Laptop-X540UAR:~/shell$ gcc *.c
-waltermitty@waltermitty-VivoBook-15-ASUS-Laptop-X540UAR:~/shell$ ls
-a.out    AUTHORS       functions2.c  functions.c  main.c     shell.h
-Attempt  functions1.c  functions3.c  macros.h     README.md
-waltermitty@waltermitty-VivoBook-15-ASUS-Laptop-X540UAR:~/shell$ ./a.out
+waltermitty@waltermitty-VivoBook-15-ASUS-Laptop-X540UAR:~/shell$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+waltermitty@waltermitty-VivoBook-15-ASUS-Laptop-X540UAR:~/shell$ ./hsh
 $ls
-a.out	 AUTHORS       functions2.c  functions.c  main.c     shell.h
-Attempt  functions1.c  functions3.c  macros.h	  README.md
+Attempt  AUTHORS  functions1.c	functions2.c  functions3.c  functions.c  helper_macros.h  hsh  main.c  manual_simple_shell  README.md  shell.h
 $pwd
 /home/waltermitty/shell
-$cd shell
-./a.out: 3: cd: can't cd to shell
 $
 
 
